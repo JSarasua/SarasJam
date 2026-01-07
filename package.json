@@ -22,7 +22,9 @@
     "format": "eslint . --fix && prettier --write **/*.ts **/*.js **/*.json",
     "serve": "vite preview",
     "test": "npm run build && npx playwright test",
-    "test:integration-update": "npx playwright test --update-snapshots"
+    "test:integration-update": "npx playwright test --update-snapshots",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "excalibur": "0.32.0"
